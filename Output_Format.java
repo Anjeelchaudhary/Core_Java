@@ -10,6 +10,7 @@ public class  Output_Format {
             //Complete this line
             System.out.format("%-14s %03d\n",s1,x);
         }
+        sc.close();
         System.out.println("================================");
     }
 }
