@@ -8,7 +8,7 @@ public class Loop1 {
         int N = Integer.parseInt(bufferedReader.readLine().trim());
         for(int i=1;i<=10;i++){
             int loop = N*i;
-            System.out.println("2 x "+i+" = "+loop);
+            System.out.println(N+" x "+i+" = "+loop);
         }
         bufferedReader.close();
     }
