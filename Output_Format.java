@@ -1,7 +1,7 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class  Output_Format {
-    public static void main(String[] args) {
+    public static void main(String[] args) { 
         Scanner sc=new Scanner(System.in);
         System.out.println("================================");
         for(int i=0;i<3;i++){
@@ -11,6 +11,5 @@ public class  Output_Format {
             System.out.format("%-14s %03d\n",s1,x);
         }
         System.out.println("================================");
-
-}
+    }
 }
