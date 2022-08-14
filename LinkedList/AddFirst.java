@@ -92,7 +92,7 @@ public class AddFirst {
   
   
     public static void main(String args[]) {
-        LL list = new LL();
+        AddFirst list = new AddFirst();
         list.addLast("is");
         list.addLast("a");
         list.addLast("list");
