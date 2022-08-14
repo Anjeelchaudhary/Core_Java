@@ -4,11 +4,12 @@ public class AddFirst {
     
     Node head;
     private int size;
-  
+    
+    //for size
     AddFirst () {
         size = 0;
     }
-  
+    //created a node
     public class Node {
         String data;
         Node next;
@@ -19,12 +20,13 @@ public class AddFirst {
             size++;
         }
     }
-  
+    //adding a node at first
     public void addFirst(String data) {
         Node newNode = new Node(data);
         newNode.next = head;
         head = newNode;
     }
+    //adding a node at last
     public void addLast(String data) {
         Node newNode = new Node(data);
   
@@ -40,7 +42,7 @@ public class AddFirst {
   
         lastNode.next = newNode;
     }
-  
+    //printing all nodes
     public void printList() {
         Node currNode = head;
   
@@ -51,7 +53,8 @@ public class AddFirst {
   
         System.out.println("null");
     }
- 
+    
+    //remove a node from first
     public void removeFirst() {
         if(head == null) {
             System.out.println("Empty List, nothing to delete");
@@ -61,7 +64,8 @@ public class AddFirst {
         head = this.head.next;
         size--;
     }
-  
+    
+    //remove a node from last
     public void removeLast() {
         if(head == null) {
             System.out.println("Empty List, nothing to delete");
@@ -84,13 +88,14 @@ public class AddFirst {
   
         currNode.next = null;
     }
-  
+    
+    //getting a size of list
     public int getSize() {
         return size;
     }
   
   
-  
+    //main function
     public static void main(String args[]) {
         AddFirst list = new AddFirst();
         list.addLast("is");
