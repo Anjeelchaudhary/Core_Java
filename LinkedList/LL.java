@@ -37,6 +37,34 @@ public class LL {
         currnNode=newNode;
     }
 
+    //deleting first Node
+    public void delFirst(){
+        if(head == null){
+            System.out.println("The list is null ");
+        }
+        head = head.next;
+    }
+
+    //delete last node
+    public void delLast(){
+        if(head==null){
+            System.out.println("The list is empty ");
+        }
+
+        if(head.next==null){
+            head=null;
+        }
+
+        Node lastNode = head.next;
+        Node secondLastNode = head;
+        while(lastNode.next!=null){
+            lastNode = lastNode.next;
+            secondLastNode = secondLastNode.next;
+        }
+        secondLastNode.next=null;
+        
+    }
+
     //for printing 
     public void printList(){
         if(head == null){

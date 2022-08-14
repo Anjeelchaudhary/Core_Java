@@ -41,22 +41,23 @@ public class LLtry {
     }
 
     //for printing a linklist
-    public void printf(String data){
+    public void printf(LLtry list){
     if(head==null){
         System.out.println("NUll");
         return;
     }
     Node currnNode=head;
     while(currnNode!=null){
-        System.out.println(" -> ");
+        System.out.print(" -> ");
         currnNode=currnNode.next;
     }
+    System.out.println("null");
 }
 
     public static void main(String[] args){
-        LL list = new LL();
+        LLtry list = new LLtry();
         list.addFirst("a");
         list.addFirst("is");
-        list.printList();
+        list.printf(list);
     }
 }
