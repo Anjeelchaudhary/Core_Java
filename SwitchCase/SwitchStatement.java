@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class SwitchStatement {
 
-    public static void SwitchStatement(int no){
+    public static void chooseONe(int no){
          switch(no){
             case 1 : System.out.println("Hello");
             break;
@@ -21,7 +21,7 @@ public class SwitchStatement {
         Scanner in = new Scanner(System.in);
         System.out.print("Enter your number ");
         int num = in.nextInt();
-        SwitchStatement(num);
+        chooseONe(num);
         in.close();
     }
 }

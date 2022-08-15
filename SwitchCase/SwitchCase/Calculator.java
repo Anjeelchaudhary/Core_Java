@@ -3,7 +3,7 @@ package SwitchCase;
 import java.util.Scanner;
 
 public class Calculator {
-    public static void Calculator(int exp){
+    public static void CalculatorForswitch(int exp){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the value of a = ");
         int a = sc.nextInt();
@@ -38,7 +38,7 @@ public class Calculator {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter 1 for add, 2 for difference , 3 for multiplication , 4 for division of numbers= ");
         int c = sc.nextInt();
-        Calculator(c);
+        CalculatorForswitch(c);
         sc.close();
     }
 }
