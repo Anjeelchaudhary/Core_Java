@@ -1,4 +1,4 @@
-package Loop;
+
 
 public class InfiniteDo {
     public static void main(String args[]){
