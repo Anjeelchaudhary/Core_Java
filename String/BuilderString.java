@@ -20,5 +20,13 @@ public class BuilderString {
         //.delete is used to delete form index number to wanted number
         sb.delete(2, 3);
         System.out.println(sb);
+
+        //append meaning adding letter at last
+        sb.append('N');
+        sb.append('i');
+        sb.append('n');
+        sb.append('j');
+        sb.append('a');
+        System.out.println(sb);
     }
 }
