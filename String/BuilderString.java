@@ -12,5 +12,9 @@ public class BuilderString {
         //sb.setCharAt(index, ch);<-syntax
         sb.setCharAt(0, 'B');
         System.out.println(sb);//in upper line it has changed the value so thats why sb is uesed here
+
+        //insert is used to insert letter in the word 
+        sb.insert(2, 'o');
+        System.out.println(sb);
     }
 }
