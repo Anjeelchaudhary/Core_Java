@@ -16,5 +16,9 @@ public class BuilderString {
         //insert is used to insert letter in the word 
         sb.insert(2, 'o');
         System.out.println(sb);
+        
+        //.delete is used to delete form index number to wanted number
+        sb.delete(2, 3);
+        System.out.println(sb);
     }
 }
