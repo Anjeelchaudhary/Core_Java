@@ -36,6 +36,6 @@ public class MaxMin {
     public static void main(String args[]){
         int arrayNum = 7;
         int arraylist[] = {500,200,85,1,0,399,750};
-        ComT de = CalcMinMax(arraylist,arrayNum);
+        ComT de = CalcMinMax(arraylist,arrayNum);//bit bug here
     }
 }
