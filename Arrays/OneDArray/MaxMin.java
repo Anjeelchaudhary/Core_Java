@@ -1,11 +1,13 @@
 package Arrays.OneDArray;
 
+import java.util.ArrayList;
+
 public class MaxMin {
 
     public static class ComT{
         int min,max;
             public static void CalcMinMax(int arrInput[],int num){
-                ComT de = new ComT();//object name is same as class name
+                ComT de = new ComT();
 
                 //First condition
                 //If the only one value is present in the list
@@ -36,6 +38,7 @@ public class MaxMin {
     public static void main(String args[]){
         int arrayNum = 7;
         int arraylist[] = {500,200,85,1,0,399,750};
-        ComT de = CalcMinMax(arraylist,arrayNum);//bit bug here
+         //CalcMinMax(arraylist,arrayNum);// buggy code in main class
     }
+   
 }
