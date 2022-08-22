@@ -1,12 +1,11 @@
 package Arrays.OneDArray;
 
-import java.util.ArrayList;
-
 public class MaxMin {
 
     public static class ComT{
-        int min,max;
-            public static void CalcMinMax(int arrInput[],int num){
+        int min;
+        int max;
+            public static pair  CalcMinMax(int arrInput[],int num){
                 ComT de = new ComT();
 
                 //First condition
@@ -26,7 +25,7 @@ public class MaxMin {
 
                 //Third condition
                 //If there are n numbers of value in the arrray 
-                for(int i=0;i<num;i++){
+                for(int i=2;i<num;i++){
                     if(arrInput[i]>de.max){
                         de.max = arrInput[i];
                     }else if(arrInput[i]<de.min){
@@ -38,7 +37,7 @@ public class MaxMin {
     public static void main(String args[]){
         int arrayNum = 7;
         int arraylist[] = {500,200,85,1,0,399,750};
-         //CalcMinMax(arraylist,arrayNum);// buggy code in main class
+        // CalcMinMax(arraylist,arrayNum);// buggy code in main class
     }
    
 }
