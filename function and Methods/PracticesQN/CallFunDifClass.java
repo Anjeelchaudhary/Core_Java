@@ -1,23 +1,13 @@
-class Student{
-    String name;
 
-        Student(String name){
-            this.name = name;
-        }
-
-        public String getName(){
-            return this.name;
-        }
+class Method{
+    public void sayHello(){
+        System.out.println("hello world");
+    }
 }
-
-
-
-
 public class CallFunDifClass {
     public static void main(String[] args){
-        Student jailer = new Student("Tony Stark");
-        String name = jailer.getName();
-        System.out.println(name);
-    }   
+        Method objN = new Method();
+        objN.sayHello();
+    }
 }
 
