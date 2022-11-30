@@ -14,10 +14,11 @@ public class Binnla {
                 return mid;
             }if(arra[mid]<key){
                 start = mid+1;
-            }else(arra[mid]>key){
+            }if(arra[mid]>key){
                 end = mid-1;
             }
         }
+        return -1;
     }
     public static void main(String[] args) {
         int arra[] = {1,2,3,4,5,7,8,9};
