@@ -7,7 +7,7 @@ Code for
 
 #### # Reverse the Array
 
-```http
+```
     public static void reverseArray(int numbers[]){
         int start = 0;
         int end = numbers.length-1;
@@ -28,7 +28,7 @@ Code for
 
 #### # Binary search
 
-```http
+```
      public static int findBinary(int numbers[],int key){
         int start = 0;
         int end = numbers.length-1;
@@ -56,7 +56,7 @@ Code for
 
 #### # Buy and Sell Stock 
 
-```http
+```
      public static int calcBuyandSell(int price[]){
         int buyPrice = Integer.MAX_VALUE;
         int maxProfit = 0;
@@ -78,7 +78,7 @@ Code for
 
 #### # Kadan's Algorithm
 
-```http
+```
      public static void calcKadan(int array[]){
         int currSum = 0;
         int maxSum = Integer.MIN_VALUE;
@@ -98,7 +98,7 @@ Code for
 
 #### # Linear Search
 
-```http
+```
      public static void calcKadan(int array[]){
         int currSum = 0;
         int maxSum = Integer.MIN_VALUE;
@@ -118,7 +118,7 @@ Code for
 
 #### # Maximum SubArray
 
-```http
+```
       public static void calcMax(int array[]){
         int currSum = 0;
         int maxSum = Integer.MIN_VALUE;
@@ -145,7 +145,7 @@ Code for
 
 #### # Reverse in Array
 
-```http
+```
     public static void reverseArray(int numbers[]){
         int start = 0;
         int end = numbers.length-1;
@@ -166,7 +166,7 @@ Code for
 
 #### # Sub Arrays
 
-```http
+```
     public static void calcSub(int numbers[]) {
         for(int i=0;i<numbers.length;i++){
             for(int j=i;j<numbers.length;j++){
@@ -185,7 +185,7 @@ Code for
 
 #### # Trapped Water
 
-```http
+```
     public static int calcReserdWater(int height[]){
 
         int leftMaxheight[] = new int[height.length];
