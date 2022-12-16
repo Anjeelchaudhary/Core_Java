@@ -11,9 +11,10 @@ class MergSort{
 
     }
     public static void calcMerg(int array[],int si,int mid,int ei){
+        //left(0,3)=4 right(4,6)=3 -->6-0+1=7
         int temp[] = new int[ei-si+1];
         int i = si; //iterator for left array
-        int j = ei;//iterator for right array 
+        int j = mid+1;//iterator for right array 
         int k = 0; //iterator for temporary array
 
         while(i <= mid && j <= ei){
@@ -49,9 +50,8 @@ class MergSort{
         System.out.println();
     }
     public static void main(String[] args) {
-        int array[] = {6,93,5,2,8};
-        calcMergSort(array, 0, 0);
-        calcMerg(array, 0, 0, 0);
+        int array[] = {6,3,9,5,2,8};
+        calcMergSort(array, 0, array.length-1);
         printMergSort(array);
         
     }
