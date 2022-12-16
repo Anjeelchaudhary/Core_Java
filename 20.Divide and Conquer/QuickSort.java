@@ -8,11 +8,12 @@ public class QuickSort {
     }
 
     public static void quickSort(int array[],int si,int ei){
+        //si = sarting index and ei = ending index 
         if(si >= ei){
             return;
         }
 
-        int pIndx = partition(array,si,ei);//;ast emelemt 
+        int pIndx = partition(array,si,ei);//last emelemt 
         quickSort(array, si, pIndx-1);//left
         quickSort(array, pIndx+1, ei);//right
     }
