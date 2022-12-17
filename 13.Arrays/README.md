@@ -1,9 +1,6 @@
-
-# Road Map for DataStructure and Algorithm
-
-## 1.One-D Arrays
+## 13.Arrays
 Code for 
-[Reverse of array ](https://github.com/Anjeelchaudhary/JavaCode/blob/master/Arrays/OneDArray/Reverse.java)
+[Reverse of array ](https://github.com/Anjeelchaudhary/JavaCode/blob/master/13.Arrays/Reverse.java)
 
 #### # Reverse the Array
 
@@ -24,7 +21,7 @@ Code for
 ```
 ##
 Code for 
-[Binary search ](https://github.com/Anjeelchaudhary/JavaCode/blob/master/Arrays/OneDArray/BinarySearch.java)
+[Binary search ](https://github.com/Anjeelchaudhary/JavaCode/blob/master/13.Arrays/BinarySearch.java)
 
 #### # Binary search
 
@@ -52,7 +49,7 @@ Code for
 ```
 ##
 Code for 
-[Buy and Sell stock ](https://github.com/Anjeelchaudhary/JavaCode/blob/master/Arrays/OneDArray/BuyAndSellStock.java)
+[Buy and Sell stock ](https://github.com/Anjeelchaudhary/JavaCode/blob/master/13.Arrays/BuyAndSellStock.java)
 
 #### # Buy and Sell Stock 
 
@@ -74,7 +71,7 @@ Code for
 ```
 ##
 Code for 
-[Kadan's Algorithm](https://github.com/Anjeelchaudhary/JavaCode/blob/master/Arrays/OneDArray/Kadan.java)
+[Kadan's Algorithm](https://github.com/Anjeelchaudhary/JavaCode/blob/master/13.Arrays/Kadan.java)
 
 #### # Kadan's Algorithm
 
@@ -94,7 +91,7 @@ Code for
 ```
 ##
 Code for 
-[Linear Search](https://github.com/Anjeelchaudhary/JavaCode/blob/master/Arrays/OneDArray/LinearSearch.java)
+[Linear Search](https://github.com/Anjeelchaudhary/JavaCode/blob/master/13.Arrays/LinearSearch.java)
 
 #### # Linear Search
 
@@ -114,7 +111,7 @@ Code for
 ```
 ##
 Code for 
-[Maximum SubArray](https://github.com/Anjeelchaudhary/JavaCode/blob/master/Arrays/OneDArray/MaxSubArray.java)
+[Maximum SubArray](https://github.com/Anjeelchaudhary/JavaCode/blob/master/13.Arrays/MaxSubArray.java)
 
 #### # Maximum SubArray
 
@@ -141,28 +138,7 @@ Code for
 ```
 ##
 Code for 
-[Reverse in Array](https://github.com/Anjeelchaudhary/JavaCode/blob/master/Arrays/OneDArray/Reverse.java)
-
-#### # Reverse in Array
-
-```
-    public static void reverseArray(int numbers[]){
-        int start = 0;
-        int end = numbers.length-1;
-        int temp;
-
-        while(start < end){
-            temp = numbers[start];
-            numbers[start] = numbers[end];
-            numbers[end] = temp;
-            start++;
-            end--;
-        }
-    }
-```
-##
-Code for 
-[Sub Array](https://github.com/Anjeelchaudhary/JavaCode/blob/master/Arrays/OneDArray/SubArrays.java)
+[Sub Array](https://github.com/Anjeelchaudhary/JavaCode/blob/master/13.Arrays/SubArrays.java)
 
 #### # Sub Arrays
 
@@ -181,7 +157,7 @@ Code for
 ```
 ##
 Code for 
-[Trapped Water](https://github.com/Anjeelchaudhary/JavaCode/blob/master/Arrays/OneDArray/TrappedWater.java)
+[Trapped Water](https://github.com/Anjeelchaudhary/JavaCode/blob/master/13.Arrays/TrappedWater.java)
 
 #### # Trapped Water
 
