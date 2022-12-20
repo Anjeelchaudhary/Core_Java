@@ -2,7 +2,8 @@
     "java.project.sourcePaths": [
         "RandomPracticeFile",
         "20.Divide and Conquer",
+        "15.2-D Arrays",
         "11.function and Methods",
-        "15.2-D Arrays"
+        "16.String"
     ]
 }
