@@ -12,7 +12,11 @@ public class SortArraylist {
         lis.add(1);
         lis.add(3);
         System.out.println(lis);
-        Collections.sort(lis);
+        Collections.sort(lis);//this line sorts for assending order
+        System.out.println(lis);
+
+        Collections.sort(lis, Collections.reverse(lis));//this line sorts in decending order
+                        //comparators - function logic
         System.out.println(lis);
     }
 }
