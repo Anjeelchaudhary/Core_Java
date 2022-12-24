@@ -1,10 +1,11 @@
 {
     "java.project.sourcePaths": [
         "RandomPracticeFile",
+        "23.ArrayList",
         "20.Divide and Conquer",
         "16.String",
         "15.2-D Arrays",
         "11.function and Methods",
-        "23.ArrayList"
+        "17.BItManupulataion"
     ]
 }
