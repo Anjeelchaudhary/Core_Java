@@ -63,7 +63,7 @@ Code for
 ```
 #
 Code for 
-[Stair Case](https://github.com/Anjeelchaudhary/JavaCode/blob/master/15.2-D%20Arrays/StairCase.java()
+[Stair Case](https://github.com/Anjeelchaudhary/JavaCode/blob/master/15.2-D%20Arrays/StairCase.java)
 
 #### # Stair Case
 
