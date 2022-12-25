@@ -27,3 +27,5 @@ public class SortedAndRotated{
         System.out.println("Your value lies in Index : "+Indexes);
     }
 }
+
+//This is optimized Binary search 
