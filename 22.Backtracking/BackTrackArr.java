@@ -7,8 +7,8 @@ public class BackTrackArr {
         }
         // operation
         array[i] = value;
-        changeArray(array,i+1,value+1);
-        array[i] = array[i]-2;
+        changeArray(array,i+1,value+1);//function call step 
+        array[i] = array[i]-2;//backtracking step
     }
 
     public static void printTrack(int array[]) {
