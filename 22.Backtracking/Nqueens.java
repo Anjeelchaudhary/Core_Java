@@ -1,4 +1,5 @@
 public class Nqueens {
+    //This code is only for how to placing nQueens in the chess borad
     public static void nQeen(char board[][],int row) {
         //base case 
         if(row == board.length) {
