@@ -1,25 +1,26 @@
-public class nQueensIsSafe { 
-    public static boolean isSafe(char board[][],int row,int col) {
-        //vertical 
+public class nQueensIsSafe {
+    public static boolean isSafe(char[][] board,int row,int col) {
+        //vertical
         for(int i=row-1;i>=0;i--) {
-            if(board[i][row] == 'Q') {
+            if(board[i][col] == 'Q') {
                 return false;
             }
         }
-        //leftDiago
-        for(int i=row-1,j=col-1; i>=0 && j>=0; i--,j--) {
+        //diag left up
+        for(int i=row-1,j=col-1;i>=0 && j>=0;i--,j--) {
             if(board[i][j] == 'Q') {
                 return false;
             }
         }
-        //rightDiago
-        for(int i=row-1,j=col+1;i>=0 && j<=board.length;i--,j++) {
+        //diag right up 
+        for(int i=row-1,j=col+1;i>=0 && j<board.length;i--,j++) {
             if(board[i][j] == 'Q') {
                 return false;
             }
         }
         return true;
     }
+    //This code is only for how to placing nQueens in the chess borad
     public static void nQeen(char board[][],int row) {
         //base case 
         if(row == board.length) {
@@ -33,6 +34,7 @@ public class nQueensIsSafe {
                 nQeen(board,row+1);//function call
                 board[row][j] = 'X';//backtrack
             }
+            
         }
     }
     //for printing of borads
@@ -45,7 +47,7 @@ public class nQueensIsSafe {
         }
     }
     public static void main(String[] args) {
-        int n = 4;
+        int n = 2;
         char board[][] = new char[n][n];
         for(int i=0;i<n;i++) {
             for(int j=0;j<n;j++) {
