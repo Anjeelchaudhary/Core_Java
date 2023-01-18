@@ -9,7 +9,24 @@ public class AddFist {
     }
     public static LinkAddFirst head;
     public static LinkAddFirst tail;
+    
+    public static addFirst(int data) {
+        //first step = crete a new node
+        LinkAddFirst newNode = new LinkAddFirst(data);
+
+        if(head == null) {
+            head = tail = newNode;
+            return;
+        }
+
+        //second step = newNode next = head
+        newNode.next = head;
+
+        //third step = newNode
+        head = newNode;
+        
+    }
     public static void main(String[] args) {
-        LinkAddFirst ll = new LinkAddFirst();
+        
     }
 }
