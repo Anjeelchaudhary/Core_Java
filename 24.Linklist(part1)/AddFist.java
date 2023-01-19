@@ -1,32 +1,32 @@
 public class AddFist {
-    public class LinkAddFirst {
+    public class Node {
         int data;
-        LinkAddFirst next;
-        void LinkAddFirst(int data) {
+        Node next;
+        void Node(int data) {
             this.data = data;
-            this.next = next;
+            this.next = null;
         }
     }
-    public static LinkAddFirst head;
-    public static LinkAddFirst tail;
-    
-    public static addFirst(int data) {
-        //first step = crete a new node
-        LinkAddFirst newNode = new LinkAddFirst(data);
 
+    public static Node head;
+    public static Node tail;
+
+    public static void adding(int data) {
+        //strp1:-creating a node
+        Node newNode = new Node(data);
         if(head == null) {
             head = tail = newNode;
             return;
         }
-
-        //second step = newNode next = head
+        //step2:-newNode pointing towards head
         newNode.next = head;
-
-        //third step = newNode
-        head = newNode;
-        
+        //newNode becomes the head node
+        newNode = head;
     }
+
     public static void main(String[] args) {
-        
+        LinkedList ll =new LinkedList();
+        ll.adding(1);
+        ll.adding(2);
     }
 }
