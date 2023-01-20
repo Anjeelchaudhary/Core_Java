@@ -1,8 +1,10 @@
+import java.util.LinkedList;
+
 public class AddFist {
-    public class Node {
+    public static class Node {
         int data;
         Node next;
-        void Node(int data) {
+        Node(int data) {
             this.data = data;
             this.next = null;
         }
@@ -14,6 +16,7 @@ public class AddFist {
     public static void adding(int data) {
         //strp1:-creating a node
         Node newNode = new Node(data);
+    
         if(head == null) {
             head = tail = newNode;
             return;

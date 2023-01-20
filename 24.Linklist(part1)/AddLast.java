@@ -4,7 +4,7 @@ public class AddLast {
     public static class Node {
         int data;
         Node next;
-        void Node(int data) {
+         Node(int data) {
             this.data = data;
             this.next = null;
         }
@@ -23,7 +23,7 @@ public class AddLast {
     }
     public static void main(String[] args) {
         LinkedList ll = new LinkedList<>();
-        ll.addingLogic(2);
-        ll.addingLogic(3);
+        AddLast.addinLogic(1);
+        AddLast.addinLogic(2);
     }   
 }
