@@ -1,5 +1,3 @@
-
-
 import java.util.LinkedList;
 
 public class PrintingList {
@@ -9,7 +7,7 @@ public class PrintingList {
         Node next;
         Node(int data) {
             this.data = data;
-            this.next = next;
+            this.next = null;
         }
     }
     public static Node head;
@@ -20,7 +18,7 @@ public class PrintingList {
         Node newNode = new Node(data);
 
         if(head == null) {
-            head = tail = null;
+            head = tail = newNode;
             return;
         }
         
@@ -33,22 +31,23 @@ public class PrintingList {
         Node newNode = new Node(data);
 
         if(head == null) {
-            head = tail = null;
+            head = tail = newNode;
             return;
         }
 
         tail.next = newNode;
-        newNode = tail;
+        tail = newNode;
     }
 
     //function for printing a linked list
     public void print() {
         if(head == null) {
             System.out.println("empty linkedList");
+            return;
         }
 
         Node temp = head;
-        while(head != null) {
+        while(temp != null) {
             System.out.print(temp.data+" ->");
             temp = temp.next;
         }
@@ -67,4 +66,6 @@ public class PrintingList {
         ll.print();
     
     }    
+
+    
 }
