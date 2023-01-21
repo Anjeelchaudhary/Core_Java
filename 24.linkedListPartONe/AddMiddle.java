@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 
-public class PrintingList {
+public class AddMiddle {
     //creating a node
     public static class Node {
         int data;
@@ -39,6 +39,19 @@ public class PrintingList {
         tail = newNode;
     }
 
+    public static void addMiddle(int indx,int data) {
+        Node newNode = new Node(data);
+        Node temp = head;
+        int i=0;
+
+        while(i < indx-1) {
+            temp = temp.next;
+            i++;
+        }
+        newNode.next = temp.next;
+        temp.next = newNode;
+    }
+
     //function for printing a linked list
     public void print() {
         if(head == null) {
@@ -54,7 +67,7 @@ public class PrintingList {
         System.out.println("null");
     }
     public static void main(String[] args) {
-        LinkedList ll = new LinkedList();
+        PrintingList ll = new PrintingList();
         ll.print();
         ll.addFirst(2);
         ll.print();
@@ -64,10 +77,9 @@ public class PrintingList {
         ll.print();
         ll.addLast(4);
         ll.print();
+        ll.addMiddle(2, 9);
+        ll.print();
     
-    }
-
-    public void addMiddle(int i, int j) {
     }    
 
     
