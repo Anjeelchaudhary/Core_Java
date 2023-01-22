@@ -12,10 +12,12 @@ public class PrintingList {
     }
     public static Node head;
     public static Node tail;
+    public static int  size;//this will give us the size of the linked list
 
     //function for adding a node at first
     public static void addFirst(int data) {
         Node newNode = new Node(data);
+        size++;
 
         if(head == null) {
             head = tail = newNode;
@@ -29,6 +31,7 @@ public class PrintingList {
     //function for adding a node at last
     public static void addLast(int data) {
         Node newNode = new Node(data);
+        size++;
 
         if(head == null) {
             head = tail = newNode;
@@ -65,13 +68,5 @@ public class PrintingList {
         ll.addLast(4);
         ll.print();
     
-    }
-
-    public void addMiddle(int i, int j) {
-    }
-
-    public void mid(int i, int j) {
-    }    
-
-    
+    } 
 }
