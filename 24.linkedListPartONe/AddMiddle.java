@@ -39,7 +39,7 @@ public class AddMiddle {
         tail = newNode;
     }
 
-    public static void addMiddle(int indx,int data) {
+    public static void Middle(int indx,int data) {
         Node newNode = new Node(data);
         Node temp = head;
         int i=0;
@@ -77,7 +77,7 @@ public class AddMiddle {
         ll.print();
         ll.addLast(4);
         ll.print();
-        ll.addMiddle(2, 9);
+        Middle(2, 9);
         ll.print();
     
     }    

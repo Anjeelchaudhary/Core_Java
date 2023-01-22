@@ -68,6 +68,9 @@ public class PrintingList {
     }
 
     public void addMiddle(int i, int j) {
+    }
+
+    public void mid(int i, int j) {
     }    
 
     
