@@ -49,7 +49,7 @@ public class RemoveFirst {
         }else {
             int value = head.data;
             head = tail = null;
-            return value;
+            return Integer.MIN_VALUE;
         }
         int value = head.data;
         head = head.next;
