@@ -43,6 +43,14 @@ public class RemoveFirst {
     }
     //This method is used to remove the first node in linkedlist
     public int removeFirssta() {
+        //this is special cases in removing First Node of the ll
+        if(size == 0) {
+            System.out.println("LL is emplty ");
+        }else {
+            int value = head.data;
+            head = tail = null;
+            return value;
+        }
         int value = head.data;
         head = head.next;
         return value;
