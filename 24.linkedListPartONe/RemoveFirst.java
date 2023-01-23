@@ -41,12 +41,13 @@ public class RemoveFirst {
         tail.next = newNode;
         tail = newNode;
     }
+    //here removing first and last is not working in my program 
     //This method is used to remove the first node in linkedlist
     public int removeFirssta() {
         //this is special cases in removing First Node of the ll
         if(size == 0) {
             System.out.println("LL is emplty ");
-        }else {
+        }else if(size == 1){
             int value = head.data;
             head = tail = null;
             return Integer.MIN_VALUE;
@@ -54,6 +55,39 @@ public class RemoveFirst {
         int value = head.data;
         head = head.next;
         return value;
+    }
+
+    public int removeLLassta() {
+        //special case for removing last node
+        if(size == 0) {
+            System.out.println("ll is emplty");
+            return Integer.MIN_VALUE;
+        }else if(size == 1) {
+            int value = head.data;
+            head = tail = null;
+            size--;
+            return value;
+        }
+        Node previous = head;
+        for(int i=0;i<size-2;i++) {
+            previous = previous.next;
+        }
+
+
+
+    }
+    //This method is use to search any value in the ll 
+    public static int itrSearch(int key) {
+        Node temp = head;
+        int i=0;
+        while(temp != null) {
+            if(temp.data == key) {
+                return i;
+            }
+            temp = temp.next;
+            i++;
+        }
+        return -1; //here if the key is not available in ll then -1 will return
     }
 
     //function for printing a linked list
@@ -80,6 +114,8 @@ public class RemoveFirst {
         ll.addLast(3);
         ll.print();
         ll.addLast(4);
+        ll.print();
+        ll,itrSearch(3);
         ll.print();
     
     } 
