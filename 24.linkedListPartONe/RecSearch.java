@@ -11,6 +11,8 @@ public class RecSearch {
             this.next = null;
         }
     }
+    public static Node head;
+    public static Node tail;
   
     public static int helper(Node head,int key) {
         if(head == null) {
