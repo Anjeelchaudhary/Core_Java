@@ -28,19 +28,7 @@ public class RemoveFirst {
         head = newNode;
     }
 
-    //function for adding a node at last
-    public static void addLast(int data) {
-        Node newNode = new Node(data);
-        size++;
-
-        if(head == null) {
-            head = tail = newNode;
-            return;
-        }
-
-        tail.next = newNode;
-        tail = newNode;
-    }
+  
     //here removing first and last is not working in my program 
     //This method is used to remove the first node in linkedlist
     public int removeFirssta() {
