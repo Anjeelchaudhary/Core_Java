@@ -4,8 +4,8 @@
 
 #### Step 1: Run this command in terminal
 ```
-$ sudo apt-get install oracle-java8-installer 
-$ sudo apt install oracle-java8-set-default
+$ sudo apt update
+$ sudo apt install openjdk-11-jdk
 ```
 
 #### Step 2: Check the Java Version
