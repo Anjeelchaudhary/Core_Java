@@ -216,6 +216,28 @@ Code for
         return;
     }
 ```
+
+Code for 
+[Reversering linkedlist](https://github.com/Anjeelchaudhary/JavaCode/blob/master/24.linkedListPartONe/Reversell.java)
+
+#### #  Reversering linkedlist
+
+```
+   public static void revLinkedlist() {
+        Node prev = null;
+        Node curr = tail = head;
+        Node next;
+
+        while(curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+
+    }
+```
 #
 Code for 
 [Finding Mid Node](https://github.com/Anjeelchaudhary/JavaCode/blob/master/17.BItManupulataion/PowerOfNum.java)
