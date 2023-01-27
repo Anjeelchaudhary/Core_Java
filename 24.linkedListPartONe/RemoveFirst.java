@@ -27,10 +27,6 @@ public class RemoveFirst {
         newNode.next = head;
         head = newNode;
     }
-
-  
-    //here removing first and last is not working in my program 
-    //This method is used to remove the first node in linkedlist
     public int removeFirssta() {
         //this is special cases in removing First Node of the ll
         if(size == 0) {
