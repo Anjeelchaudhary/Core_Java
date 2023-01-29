@@ -180,6 +180,11 @@ public int removeLLassta() {
         for(int i=0;i<size-2;i++) {
             previous = previous.next;
         }
+        int value = previous.next.data;
+        previous.next = null;
+        tail = previou;
+        size--;
+        return value;
     }
 ```
 #

@@ -36,6 +36,8 @@ public class LinkedList {
         }else if(size == 1) {
             int value = head.data;
             head = tail = null;
+            size--;
+            return value;
         }
         //actual work
         int value = head.data;
@@ -50,14 +52,37 @@ public class LinkedList {
         //base case
         if(head == null) {
             head = tail = newNode;
-            size++;
-            return;
         }
 
         //actual work
         tail.next = newNode;
         newNode = tail;
     }
+
+    //removeLast
+    public int lastRemove(int data) {
+        //base case
+        if(size == 0) {
+            System.out.print("LinkedList is empty");
+        }else if(size == 1) {
+            int Value = tail.data;
+            head = tail = null;
+            size--;
+            return Value;
+        }
+
+        //actual work
+        Node previous = head;
+        for(int i=1;i<size-2;i++) {
+            previous = previous.next;
+        }
+        int value = previous.next.data;
+        previous.next = null;
+        tail = previous;
+        size--;
+        return value;
+    }
+
     //adding at Middle should be declare as Node Not eighther int or void
     public Node middleAddition(int data) {
         Node newNode = new Node(data);
@@ -103,6 +128,8 @@ public class LinkedList {
         ll.middleAddition(9);
         ll.print();
         ll.firstRemove(1);
+        ll.print();
+        ll.lastRemove(4);
         ll.print();
     }
 }
