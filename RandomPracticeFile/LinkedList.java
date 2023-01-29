@@ -10,6 +10,7 @@ public class LinkedList {
     public static Node head;
     public static Node tail;
 
+    //adding first Node
     public void firstAddition(int data) {
         Node newNode = new Node(data);
         
@@ -24,6 +25,23 @@ public class LinkedList {
         head = newNode;
 
     }
+
+    //adding at last
+    public void lastAddition(int data) {
+        Node newNode = new Node(data);
+
+        //base case
+        if(head == null) {
+            head = tail = newNode;
+            return;
+        }
+
+        //actual work
+        tail.next = newNode;
+        newNode = tail;
+    }
+
+    //printing all nodes
     public static void print() {
         if(head == null) {
             System.out.println("LinkedList is empty");
@@ -42,6 +60,8 @@ public class LinkedList {
         ll.firstAddition(2);
         ll.print();
         ll.firstAddition(1);
+        ll.print();
+        ll.lastAddition(3);
         ll.print();
     }
 }
