@@ -9,6 +9,7 @@ public class LinkedList {
     }
     public static Node head;
     public static Node tail;
+    int size = 0;
 
     //adding first Node
     public void firstAddition(int data) {
@@ -17,13 +18,29 @@ public class LinkedList {
         //if there is only one Node
         if(head == null) {
             head = tail = newNode;
+            size++;
             return;
         }
-
+        size++;
         //if there is more than one Node in list
         newNode.next = head;
         head = newNode;
 
+    }
+
+    //removing first Node
+    public int firstRemove(int data) {
+        //base case
+        if(size == 0) {
+            System.out.print("LinkedList is empty ");
+        }else if(size == 1) {
+            int value = head.data;
+            head = tail = null;
+        }
+        //actual work
+        int value = head.data;
+        head = head.next;
+        return value;
     }
 
     //adding at last
@@ -33,6 +50,7 @@ public class LinkedList {
         //base case
         if(head == null) {
             head = tail = newNode;
+            size++;
             return;
         }
 
@@ -45,11 +63,13 @@ public class LinkedList {
         Node newNode = new Node(data);
         Node slow = head;
         Node fast = head;
+
         //intial state
         while(fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
         }
+        size++;
         //actual work
         newNode.next = slow.next;
         slow.next = newNode;
@@ -78,7 +98,11 @@ public class LinkedList {
         ll.print();
         ll.lastAddition(3);
         ll.print();
+        ll.lastAddition(4);
+        ll.print();
         ll.middleAddition(9);
+        ll.print();
+        ll.firstRemove(1);
         ll.print();
     }
 }
