@@ -1,5 +1,3 @@
-import java.util.LinkedList;
-
 public class LindkedList {
 
     //making a node
@@ -46,7 +44,7 @@ public class LindkedList {
     }
 
     public static void main(String[] args) {
-        PrintingList ll = new PrintingList(); //printlist
+        LindkedList ll = new LindkedList(); //printlist
         ll.addFirst(2);
         ll.print();
         ll.addFirst(1);
