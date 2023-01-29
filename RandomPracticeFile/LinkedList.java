@@ -40,6 +40,21 @@ public class LinkedList {
         tail.next = newNode;
         newNode = tail;
     }
+    //adding at Middle should be declare as Node Not eighther int or void
+    public Node middleAddition(int data) {
+        Node newNode = new Node(data);
+        Node slow = head;
+        Node fast = head;
+        //intial state
+        while(fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        //actual work
+        newNode.next = slow.next;
+        slow.next = newNode;
+        return newNode;
+    }
 
     //printing all nodes
     public static void print() {
@@ -62,6 +77,8 @@ public class LinkedList {
         ll.firstAddition(1);
         ll.print();
         ll.lastAddition(3);
+        ll.print();
+        ll.middleAddition(9);
         ll.print();
     }
 }
