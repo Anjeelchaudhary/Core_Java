@@ -1,6 +1,4 @@
-import java.util.LinkedList;
-
-public class PracticeFirstNode {
+public class LinkedList {
     public class Node {
         int data;
         Node next;
@@ -17,7 +15,7 @@ public class PracticeFirstNode {
         
         //if there is only one Node
         if(head == null) {
-            newNode = head =tail;
+            head = tail = newNode;
             return;
         }
 
@@ -26,9 +24,24 @@ public class PracticeFirstNode {
         head = newNode;
 
     }
+    public static void print() {
+        if(head == null) {
+            System.out.println("LinkedList is empty");
+            return;
+        }
+
+        Node temp = head;
+        while(temp != null) {
+            System.out.print(temp.data+" -> ");
+            temp = temp.next;
+        }
+        System.out.println("null");
+    }
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
-        ll.firstAddition(1);
         ll.firstAddition(2);
+        ll.print();
+        ll.firstAddition(1);
+        ll.print();
     }
 }
