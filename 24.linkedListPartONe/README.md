@@ -178,7 +178,7 @@ Code for
 #### # removing last Node
 
 ```
- //for removeing last Node customSizeCalculating method is war farbetter
+ //for removeing last Node createing customSizeCalculator helps a lot
     public int lastRemove(int data) {
         int sz = 0;
         Node locator = head;
