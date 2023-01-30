@@ -21,7 +21,7 @@ public class LinkedList {
             size++;
             return;
         }
-        
+
         size++;
         //if there is more than one Node in list
         newNode.next = head;
@@ -70,7 +70,6 @@ public class LinkedList {
 
         //for custom sizeCalculator
         while(locator != null) {
-            System.out.println("size :"+sz);
             locator = locator.next;
             sz++;
         }
@@ -90,13 +89,11 @@ public class LinkedList {
         Node previous = head;
         for(int i=0;i<sz-2;i++) {
             previous = previous.next;
-            System.out.println("Print3");
         }
         int value = previous.next.data;
         previous.next = null;
         tail = previous;
         sz--;
-        System.out.println("Print4");
         return value;
     }
 
@@ -132,6 +129,31 @@ public class LinkedList {
         }
         System.out.println("null");
     }
+
+    //iterative search 
+    public void iterativeSearch(int number) {
+
+        //customSize_Calcultor
+        int sz = 0;
+        Node locator = head;
+        while(locator != null) {
+            locator = locator.next;
+            sz++;
+        }
+        //base case
+        if(head == null) {
+            System.out.println("LinkedList is empty ");
+        }
+        //actual work
+        Node temp = head;
+        for(int i=0;i<sz;i++) {
+            if(temp.data == number) {
+                System.out.println(temp.data+" : Found in linkedlist");
+            }
+            temp = temp.next;
+            return;
+        }
+    }
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
         ll.firstAddition(2);
@@ -148,5 +170,6 @@ public class LinkedList {
         ll.print();
         ll.lastRemove(4);
         ll.print();
+        ll.iterativeSearch(2);
      }
 }
