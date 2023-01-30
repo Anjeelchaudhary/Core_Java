@@ -18,21 +18,19 @@ Code for
 [adding Node at first ](https://github.com/Anjeelchaudhary/JavaCode/blob/master/24.linkedListPartONe/AddFist.java)
 #### # Adding node at first
 
-```
-    public static void adding(int data) {
-        //step1:-creating a node
+``` public void firstAddition(int data) {
         Node newNode = new Node(data);
-    
+        
+        //if there is only one Node
         if(head == null) {
             head = tail = newNode;
+            size++;
             return;
         }
-
-        //step2:-newNode pointing towards head
+        size++;
+        //if there is more than one Node in list
         newNode.next = head;
-
-        //newNode becomes the head node
-        newNode = head;
+        head = newNode;
     }
 ```
 #
@@ -42,14 +40,22 @@ Code for
 #### # Adding Node at Middle
 
 ```
- public Node middleFind(Node head) {
+//adding at Middle should be declare as Node Not eighther int or void
+    public Node middleAddition(int data) {
+        Node newNode = new Node(data);
         Node slow = head;
         Node fast = head;
+
+        //intial state
         while(fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
         }
-        return slow; // here slow is the midNode in linkedList
+        size++;
+        //actual work
+        newNode.next = slow.next;
+        slow.next = newNode;
+        return newNode;
     }
 ```
 #
@@ -59,14 +65,19 @@ Code for
 #### # Adding Node at last
 
 ```
-   public static void addinLogic(int data) {
+   public void lastAddition(int data) {
         Node newNode = new Node(data);
+
+        //base case
         if(head == null) {
-            head=tail=newNode;
-            return;
+            head = tail = newNode;
+            size++;
         }
+
+        //actual work
         tail.next = newNode;
-        tail = newNode;
+        newNode = tail;
+        size++;
     }
 ```
 #
@@ -144,15 +155,17 @@ Code for
 #### # removing first Node
 
 ```
-    public int removeFirst() {
-        //this is special cases in removing First Node of the ll
+    public int firstRemove(int data) {
+        //base case
         if(size == 0) {
-            System.out.println("LL is emplty ");
-        }else if(size == 1){
+            System.out.print("LinkedList is empty ");
+        }else if(size == 1) {
             int value = head.data;
             head = tail = null;
-            return Integer.MIN_VALUE;
+            size--;
+            return value;
         }
+        //actual work
         int value = head.data;
         head = head.next;
         return value;
@@ -165,25 +178,40 @@ Code for
 #### # removing last Node
 
 ```
-public int removeLLassta() {
-        //special case for removing last node
-        if(size == 0) {
-            System.out.println("ll is emplty");
-            return Integer.MIN_VALUE;
-        }else if(size == 1) {
-            int value = head.data;
-            head = tail = null;
-            size--;
-            return value;
+ //for removeing last Node customSizeCalculating method is war farbetter
+    public int lastRemove(int data) {
+        int sz = 0;
+        Node locator = head;
+
+        //for custom sizeCalculator
+        while(locator != null) {
+            System.out.println("size :"+sz);
+            locator = locator.next;
+            sz++;
         }
+
+        //base case
+        if(sz == 0) {
+            System.out.println("LinkedList is empty");
+            return Integer.MIN_VALUE;
+        }else if(sz == 1) {
+            int Value = head.data;
+            head = tail = null;
+            sz--;
+            return Value;
+        }
+
+        //actual work
         Node previous = head;
-        for(int i=0;i<size-2;i++) {
+        for(int i=0;i<sz-2;i++) {
             previous = previous.next;
+            System.out.println("Print3");
         }
         int value = previous.next.data;
         previous.next = null;
-        tail = previou;
-        size--;
+        tail = previous;
+        sz--;
+        System.out.println("Print4");
         return value;
     }
 ```

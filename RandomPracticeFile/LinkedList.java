@@ -21,6 +21,7 @@ public class LinkedList {
             size++;
             return;
         }
+        
         size++;
         //if there is more than one Node in list
         newNode.next = head;
