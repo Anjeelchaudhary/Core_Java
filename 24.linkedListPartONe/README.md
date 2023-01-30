@@ -178,14 +178,13 @@ Code for
 #### # removing last Node
 
 ```
- //for removeing last Node createing customSizeCalculator helps a lot
+ //for removeing last Node creating customSizeCalculator helps a lot
     public int lastRemove(int data) {
         int sz = 0;
         Node locator = head;
 
         //for custom sizeCalculator
         while(locator != null) {
-            System.out.println("size :"+sz);
             locator = locator.next;
             sz++;
         }
@@ -205,13 +204,11 @@ Code for
         Node previous = head;
         for(int i=0;i<sz-2;i++) {
             previous = previous.next;
-            System.out.println("Print3");
         }
         int value = previous.next.data;
         previous.next = null;
         tail = previous;
         sz--;
-        System.out.println("Print4");
         return value;
     }
 ```
