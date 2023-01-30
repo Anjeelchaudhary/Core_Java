@@ -52,34 +52,50 @@ public class LinkedList {
         //base case
         if(head == null) {
             head = tail = newNode;
+            size++;
         }
 
         //actual work
         tail.next = newNode;
         newNode = tail;
+        size++;
     }
 
-    //removeLast
+    //removeLast 
+    //for removeing last Node customSizeCalculating method is war farbetter
     public int lastRemove(int data) {
+        int sz = 0;
+        Node locator = head;
+
+        //for custom sizeCalculator
+        while(locator != null) {
+            System.out.println("size :"+sz);
+            locator = locator.next;
+            sz++;
+        }
+
         //base case
-        if(size == 0) {
-            System.out.print("LinkedList is empty");
-        }else if(size == 1) {
-            int Value = tail.data;
+        if(sz == 0) {
+            System.out.println("LinkedList is empty");
+            return Integer.MIN_VALUE;
+        }else if(sz == 1) {
+            int Value = head.data;
             head = tail = null;
-            size--;
+            sz--;
             return Value;
         }
 
         //actual work
         Node previous = head;
-        for(int i=1;i<size-2;i++) {
+        for(int i=0;i<sz-2;i++) {
             previous = previous.next;
+            System.out.println("Print3");
         }
         int value = previous.next.data;
         previous.next = null;
         tail = previous;
-        size--;
+        sz--;
+        System.out.println("Print4");
         return value;
     }
 
@@ -131,5 +147,5 @@ public class LinkedList {
         ll.print();
         ll.lastRemove(4);
         ll.print();
-    }
+     }
 }
