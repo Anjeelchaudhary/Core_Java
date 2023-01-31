@@ -1,8 +1,6 @@
-import java.security.Key;
-
 public class Firstoccurence {
     public static int reOccur(int array[] ,int i,int key) {
-        if(i == array.length-1) {
+        if(i == array.length) {
             return -1;
         }
         if(array[i] == key) {
