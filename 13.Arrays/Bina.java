@@ -1,5 +1,3 @@
-package Arrays.OneDArray;
-
 public class Bina {
     public static int findBinna(int line[],int key){
         int start = 0;
@@ -20,7 +18,7 @@ public class Bina {
         return -1;
     }
    public static void main(String[] args) {
-    int line[] = {5,8,7,6,9,1,2};
+    int line[] = {1,2,3,4,5,6,7,8,9};
     int key = 5;
     System.out.println("Index key is in = "+findBinna(line, key));
 
