@@ -1,6 +1,6 @@
 public class LastOccurence {
     public static int occur(int array[],int i ,int key) {
-        if(i == array.length-1) {
+        if(i == array.length) {
             return -1;
         }
         int isFound = occur(array,i+1,key);
