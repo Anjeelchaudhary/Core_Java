@@ -1,5 +1,3 @@
-package Arrays.OneDArray;
-
 public class BinarySearch {
     public static int findBinary(int numbers[],int key){
         int start = 0;
@@ -23,7 +21,7 @@ public class BinarySearch {
     }
 
     public static void main(String[] args) {
-        int numbers[] = {1,5,9,7,3,6,4,2,8};
+        int numbers[] = {1,2,3,4,5,6,7,8,9};
         int key = 2;
         System.out.println("The number for index is : "+findBinary(numbers, key));
     } 

@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
         "RandomPracticeFile",
+        "13.Arrays",
         "23.ArrayList",
         "20.Divide and Conquer",
         "19.Recursion",
