@@ -50,16 +50,24 @@ public class LinkedList {
     public void lastAddition(int data) {
         Node newNode = new Node(data);
 
+        //customSize_Calcultor
+        int sizze = 0;
+        Node locator = head;
+        while(locator != null) {
+            locator = locator.next;
+            sizze++;
+        }
+       
+
         //base case
         if(head == null) {
             head = tail = newNode;
-            size++;
         }
 
         //actual work
         tail.next = newNode;
-        newNode = tail;
-        size++;
+        tail = newNode;
+
     }
 
     //removeLast 
@@ -154,6 +162,20 @@ public class LinkedList {
             return;
         }
     }
+
+    //To check cycle in linkedList
+    public static boolean isCycle() {
+        Node slow = head;
+        Node fast = head;
+        while(fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if(slow == fast) {
+                return true;
+            }
+        }
+        return false;
+    }
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
         ll.firstAddition(2);
@@ -166,10 +188,11 @@ public class LinkedList {
         ll.print();
         ll.middleAddition(9);
         ll.print();
-        ll.firstRemove(1);
-        ll.print();
-        ll.lastRemove(4);
-        ll.print();
+        // ll.firstRemove(1);
+        // ll.print();
+        // ll.lastRemove(4);
+        // ll.print();
         ll.iterativeSearch(2);
+        System.out.println(isCycle());
      }
 }

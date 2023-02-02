@@ -1,5 +1,3 @@
-import java.util.LinkedList;
-
 public class AddLast {
     public static class Node {
         int data;
@@ -19,11 +17,33 @@ public class AddLast {
             return;
         }
         tail.next = newNode;
+        System.out.println(tail.next.data+" added ");
         tail = newNode;
     }
+    //print
+    public static void print() {
+        Node temp = head;
+
+        if(head == null) {
+            System.out.println("LL is empty ");
+            return;
+        }
+        while(temp != null) {
+            System.out.print(temp.data+" -> ");
+            temp = temp.next;
+        }
+        System.out.println("null");
+    }
     public static void main(String[] args) {
-        LinkedList ll = new LinkedList<>();
-        AddLast.addinLogic(1);
-        AddLast.addinLogic(2);
+        AddLast ll = new AddLast();
+        ll.addinLogic(1);
+        ll.print();
+        ll.addinLogic(2);
+        ll.print();
+        ll.addinLogic(3);
+        ll.print();
+        ll.addinLogic(4);
+        ll.print();
+        
     }   
 }
