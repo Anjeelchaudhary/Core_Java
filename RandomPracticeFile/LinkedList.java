@@ -18,7 +18,6 @@ public class LinkedList {
         //if there is only one Node
         if(head == null) {
             head = tail = newNode;
-            size++;
             return;
         }
 
@@ -154,13 +153,37 @@ public class LinkedList {
         }
         //actual work
         Node temp = head;
-        for(int i=0;i<sz;i++) {
+        for(int i=0;i<sz;) {
             if(temp.data == number) {
                 System.out.println(temp.data+" : Found in linkedlist");
             }
             temp = temp.next;
             return;
         }
+    }
+    //connecting last node to the middleNode 
+    public static void isConnected() {
+        //base case
+        if(head == null) {
+            return ;
+        }
+
+        //work done
+
+        //finding middleNode
+        Node slow = head;
+        Node fast = head;
+        while(fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        //finding lastNode
+        Node last = head;
+        while(last != null) {
+            last = last.next;
+        }
+        //Connectin lastNode to middleNode
+        last.next = slow;
     }
 
     //To check cycle in linkedList
@@ -176,22 +199,54 @@ public class LinkedList {
         }
         return false;
     }
+
+    //removing cycleIn ll 
+    public static void cycle() {
+        Node slow = head;
+        Node fast = head;
+        boolean circleCycle = false;
+        while(fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if(slow == fast) {
+                circleCycle = true;
+                break;
+            }
+        }
+        //base case
+        if(circleCycle == false) {
+            return;
+        }
+
+        Node previous = fast;
+        slow = head;
+        while(slow != fast) {
+            previous = fast;
+            slow = slow.next;
+            fast = fast.next;
+        }
+        previous.next = null;
+    }
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
         ll.firstAddition(2);
         ll.print();
         ll.firstAddition(1);
         ll.print();
-        ll.lastAddition(3);
+        ll.firstAddition(3); 
         ll.print();
         ll.lastAddition(4);
         ll.print();
         ll.middleAddition(9);
         ll.print();
-        // ll.firstRemove(1);
-        // ll.print();
-        // ll.lastRemove(4);
-        // ll.print();
+        ll.firstRemove(1);
+        ll.print();
+        ll.lastRemove(4);
+        ll.print();
+        ll.firstAddition(7);
+        ll.print();
+        ll.lastAddition(8);
+        ll.print();
         ll.iterativeSearch(2);
         System.out.println(isCycle());
      }
