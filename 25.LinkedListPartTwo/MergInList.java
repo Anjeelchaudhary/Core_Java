@@ -38,20 +38,20 @@ class MergInList {
             }
         }
 
-        //sorting for lestover 
+        //sorting for leftover 
         while(head1 != null) {
             temp.next = head1;
             head1 = head1.next;
             temp = temp.next;
         }
-        //sorting for lestover 
+        //sorting for leftover 
         while(head2 != null) {
             temp.next = head2;
             head2 = head2.next;
             temp = temp.next;
         }
 
-
+        //because 1st node is node having -1 so to make it garbage value
         return dumMergll.next;
     } 
 
@@ -62,7 +62,7 @@ class MergInList {
             return head;
         }
 
-        //1st - To find node
+        //1st - To find mid node
         Node mid = getMid(head);
         //left and right MergSort
         Node rightHead = mid.next;
