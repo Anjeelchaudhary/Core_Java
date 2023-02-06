@@ -11,7 +11,17 @@ class MergInList {
     public static Node head;
     public static Node tail;
 
-   
+    // finding mid
+    public static Node getMid(Node head) {
+        Node fast = head;
+        Node slow = head;
+        while(fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+
     //MergSort logic
     public Node mergSortFunction(Node head1,Node head2){
         Node dumMergll = new Node(-1);
