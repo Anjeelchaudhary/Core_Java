@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class SimpleHandle {
+class ExceptionHandle {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
