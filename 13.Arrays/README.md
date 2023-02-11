@@ -163,21 +163,27 @@ Code for
 
 ```
     public static int calcReserdWater(int height[]){
-
+        
+        //calculating leftMaxHeight
         int leftMaxheight[] = new int[height.length];
         leftMaxheight[0] = height[0];
         for(int i=1 ;i<height.length ;i++){
             leftMaxheight[1] = Math.max(height[i], leftMaxheight[i-1]);
         }
+
+        //calculating rightMaxHeight
         int rightMaxheight[] =new int[height.length];
         rightMaxheight[height.length-1] = height[height.length-1];
         for(int i=height.length-2 ;i>=0 ;i--){
             rightMaxheight[i] = Math.max(height[i], rightMaxheight[i+1]);
         }
+
         int trappedWater = 0;
+        //Loop
         for(int i=0;i<height.length;i++){
+            //WaterLevel = min(LeftMaxBoundary,rightMaxBounday)
             int waterLevel = Math.min(leftMaxheight[i], rightMaxheight[i]);
-            trappedWater += waterLevel - height[i];
+            trappedWater += waterLevel - height[i];        
         }
         return trappedWater;
     }
