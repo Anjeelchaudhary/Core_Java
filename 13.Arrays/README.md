@@ -168,7 +168,7 @@ Code for
         int leftMaxheight[] = new int[height.length];
         leftMaxheight[0] = height[0];
         for(int i=1 ;i<height.length ;i++){       //here for i = 0 is already calculated ,So 1 is taken
-            leftMaxheight[1] = Math.max(height[i], leftMaxheight[i-1]);
+            leftMaxheight[i] = Math.max(height[i], leftMaxheight[i-1]);
         }
 
         //calculating rightMaxHeight
