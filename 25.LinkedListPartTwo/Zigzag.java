@@ -33,20 +33,20 @@ public class Zigzag {
             curr = next;
         }
 
-        Node left = head;
-        Node right = prev;
+        Node leftHead = head;
+        Node rightHead = prev;
         Node nextL , nextR;
 
         
         //alterMerg - zigzag
-        while(left != null && right != null) {
-            nextL = left.next;
-            left.next = right;
-            nextR = right.next;
-            right.next = nextL;
+        while(leftHead != null && rightHead != null) {
+            nextL = leftHead.next;
+            leftHead.next = rightHead;
+            nextR = rightHead.next;
+            rightHead.next = nextL;
 
-            left = nextL;
-            right = nextR;
+            leftHead = nextL;
+            rightHead = nextR;
         }
     }
     public static void main(String[] args) {
