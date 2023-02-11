@@ -21,10 +21,42 @@ public class Zigzag {
         Node mid = slow;
 
         //reverse 2nd half
+        Node curr = mid.next;
+        mid.next = null;
+        Node prev = null;
+        Node next;
+
+        while(curr!= null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+
+        Node left = head;
+        Node right = prev;
+        Node nextL , nextR;
+
         
         //alterMerg - zigzag
+        while(left != null && right != null) {
+            nextL = left.next;
+            left.next = right;
+            nextR = right.next;
+            right.next = nextL;
+
+            left = nextL;
+            right = nextR;
+        }
     }
     public static void main(String[] args) {
-        
+        Zigzag ll = new Zigzag();
+        ll.addLast(1);//here add last function should be added mannually 
+        ll.addLast(2);//here add last function should be added mannually 
+        ll.addLast(3);//here add last function should be added mannually 
+        ll.addLast(4);//here add last function should be added mannually 
+        ll.addLast(5);//here add last function should be added mannually 
+        //1->2->3->4->5
+        ll.print();
     }
 }
