@@ -16,6 +16,7 @@ class ExceptionHandle {
         }catch(ArithmeticException e) {
             System.out.println(e);
         }
+        sc.close();
     }
 
     //Exception is handeled through throws method
