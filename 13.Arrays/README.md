@@ -174,7 +174,7 @@ Code for
         //calculating rightMaxHeight
         int rightMaxheight[] =new int[height.length];
         rightMaxheight[height.length-1] = height[height.length-1];
-        for(int i=height.length-2 ;i>=0 ;i--){
+        for(int i=height.length-2 ;i>=0 ;i--){     //here for height.length-1 is already calculated ,So -2 is taken
             rightMaxheight[i] = Math.max(height[i], rightMaxheight[i+1]);
         }
 
