@@ -1,5 +1,3 @@
-package Arrays.OneDArray;
-
 class BuyandSellStock {
     public static int calcBuyandSell(int price[]){
         int buyPrice = Integer.MAX_VALUE;

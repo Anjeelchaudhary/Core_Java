@@ -1,7 +1,3 @@
-package Arrays.OneDArray;
-
-import java.security.Key;
-
 public class Binnla {
     public static int calcBinaahh(int arra[],int key){
         int start = 0;

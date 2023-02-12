@@ -1,5 +1,3 @@
-package starsFormat;
-
 class FloidsTriangle{
     public static void main(String[] args){
         int n = 5;

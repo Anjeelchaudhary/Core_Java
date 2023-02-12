@@ -1,4 +1,3 @@
-package starsFormat;
 
 public class bottomPira {
     public static void main(String args[]){

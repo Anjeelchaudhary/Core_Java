@@ -1,5 +1,3 @@
-package starsFormat;
-
 public class ZeroToOne {
     public static void main(String args[]){
         int n = 5;
