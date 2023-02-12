@@ -12,12 +12,14 @@ public class AddLast {
 
     public static void addinLogic(int data) {
         Node newNode = new Node(data);
+        //base case
         if(head == null) {
             head=tail=newNode;
             return;
         }
+
+        //workdone
         tail.next = newNode;
-        System.out.println(tail.next.data+" added ");
         tail = newNode;
     }
     //print

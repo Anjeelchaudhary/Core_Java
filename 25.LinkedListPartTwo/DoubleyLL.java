@@ -13,6 +13,7 @@ public class DoubleyLL {
     }
     public static Node head;
     public static Node tail;
+    public static int size = 1;
 
     //adding at first
     public void firstAdd(int data) {
@@ -23,27 +24,54 @@ public class DoubleyLL {
             head = tail = newNode;
             return;
         }
-
+    
         //workdone
         newNode.next = head;
         head.prev = newNode;
         head = newNode;
+        size++;
+        // System.out.println("Total Node in doubley LinedkedList is = "+size);
     }
 
     //removing first
     public int firstRemove() {
-
         //base case
         if(head == null) {
             System.out.println("Empty");
             return Integer.MIN_VALUE;
         }
 
+        //if there is only one node
+        if(size == 1) {
+            int val = head.data;
+            head = tail = null;
+            size--;
+            return val;
+        }
+
         //work done
         int val = head.data;
         head = head.next;
         head.prev = null;
+        size--;
         return val;
+    }
+
+    //adding at last
+    public void lastAdd(int data) {
+        Node newNode = new Node(data);
+
+        //base case
+        if(head == null) {
+            head = tail = newNode;
+            size++;
+            return;
+        }
+        //work done
+        size++;
+        tail.next = newNode;
+        newNode.prev = tail;
+        newNode = tail;
     }
 
     //for printing
@@ -53,10 +81,13 @@ public class DoubleyLL {
             System.out.print(temp.data+" <-> ");
             temp = temp.next;
         }
-        System.out.println("null");
+        System.out.println("null"+"  { Size = "+size+" }");
     }
+     
     public static void main(String[] args) {
         DoubleyLL ll = new DoubleyLL();
+        ll.firstAdd(3);
+        ll.printu();
         ll.firstAdd(2);
         ll.printu();
         ll.firstAdd(1);
@@ -64,6 +95,10 @@ public class DoubleyLL {
         ll.firstAdd(0);
         ll.printu();
         ll.firstRemove();
+        ll.printu();
+        ll.firstAdd(-1);
+        ll.printu();
+        ll.lastAdd(4);
         ll.printu();
     }
 }
