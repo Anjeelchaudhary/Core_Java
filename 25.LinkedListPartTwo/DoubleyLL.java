@@ -30,6 +30,22 @@ public class DoubleyLL {
         head = newNode;
     }
 
+    //removing first
+    public int firstRemove() {
+
+        //base case
+        if(head == null) {
+            System.out.println("Empty");
+            return Integer.MIN_VALUE;
+        }
+
+        //work done
+        int val = head.data;
+        head = head.next;
+        head.prev = null;
+        return val;
+    }
+
     //for printing
     public static void printu() {
         Node temp = head;
@@ -46,6 +62,8 @@ public class DoubleyLL {
         ll.firstAdd(1);
         ll.printu();
         ll.firstAdd(0);
+        ll.printu();
+        ll.firstRemove();
         ll.printu();
     }
 }
