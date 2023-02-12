@@ -29,10 +29,23 @@ public class DoubleyLL {
         head.prev = newNode;
         head = newNode;
     }
+
+    //for printing
+    public static void printu() {
+        Node temp = head;
+        while(temp != null) {
+            System.out.print(temp.data+" <-> ");
+            temp = temp.next;
+        }
+        System.out.println("null");
+    }
     public static void main(String[] args) {
         DoubleyLL ll = new DoubleyLL();
         ll.firstAdd(2);
+        ll.printu();
         ll.firstAdd(1);
+        ll.printu();
         ll.firstAdd(0);
+        ll.printu();
     }
 }
