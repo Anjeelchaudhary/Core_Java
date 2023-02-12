@@ -74,6 +74,30 @@ public class DoubleyLL {
         newNode = tail;
     }
 
+    //removing at last
+    public int removeLast() {
+        //base case
+        if(head == null) {
+            System.out.println("Empty");
+            return Integer.MIN_VALUE;
+        }
+
+        //if there is single node
+        if(size == 1) {
+            int val = head.data;
+            head = tail = null;
+            size--;
+            return val;
+        }
+
+        //workdone
+        int val = tail.data;
+        tail.prev = tail;
+        tail.next = null;
+        size--;
+        return val;
+    }
+
     //for printing
     public static void printu() {
         Node temp = head;
@@ -99,6 +123,8 @@ public class DoubleyLL {
         ll.firstAdd(-1);
         ll.printu();
         ll.lastAdd(4);
+        ll.printu();
+        ll.removeLast();
         ll.printu();
     }
 }
