@@ -1,6 +1,3 @@
-import java.security.Key;
-import java.util.LinkedList;
-
 public class RecSearch {
     //creating a node
     public static class Node {
@@ -33,7 +30,7 @@ public class RecSearch {
         return helper(head, key);
     }
     public static void main(String[] args) {
-        LinkedList ll = new LinkedList<>();
+        RecSearch ll new RecSearch();
         System.out.println(ll.recuSearch(3));
     }
 }

@@ -39,7 +39,7 @@ public class RemoveNth {
         return;
     }
     public static void main(String[] args) {
-        LinkedList ll = new LinkedList<>();
+        RemoveNth ll = new RemoveNth();
         ll.remNthFromLast(3);
     }
 }

@@ -1,5 +1,3 @@
-import java.util.LinkedList;
-
 public class RemoveFirst {
     //creating a node
     public static class Node {
@@ -89,7 +87,7 @@ public class RemoveFirst {
         System.out.println("null");
     }
     public static void main(String[] args) {
-        LinkedList ll = new LinkedList();
+        RemoveFirst ll = new RemoveFirst();
         ll.print();
         ll.addFirst(2);
         ll.print();

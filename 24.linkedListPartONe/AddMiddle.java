@@ -1,5 +1,3 @@
-import java.util.LinkedList;
-
 public class AddMiddle {
     //creating a node
     public static class Node {

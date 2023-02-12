@@ -26,7 +26,7 @@ public class Reversell {
 
     }
     public static void main(String[] args) {
-        LindkedList ll = new LindkedList();
+        Reversell ll = new Reversell();
         ll.revLinkedlist();
     }
 }
