@@ -50,6 +50,19 @@ class CountOddNum {
         return true;
     }
 
+    // //This method is small and optimized to O(1)
+    // public static int bitwise(int start,int end) {
+        
+    //     //If the starting value is even make it odd 
+    //     if((start & 1)==0) {
+    //         start++;
+    //     }
+       
+    //     //if the starting value gets larger than ending value then it will return 0
+    //     //and if the ending value is larger than we will perfom formula
+    //     return start > end ? 0 : (end - start) / 2 + 1;
+    // }
+
     public static void main(String[] args) {
         //taking input
         Scanner sc = new Scanner(System.in);
@@ -58,6 +71,7 @@ class CountOddNum {
         System.out.print("Enter ending number = ");
         int end = sc.nextInt();
 
+        System.out.println(bitwise(start, end));
         //object
         CountOddNum ll = new CountOddNum();
         int count = 0;
