@@ -24,9 +24,10 @@ public class CycleLinkedList {
         return false;
     }
     public static void main(String[] args) {
-        head = new Node(1);
-        head.next = new Node(2);
-        head.next.next = new Node(3);
+        CycleLinkedList ll = new CycleLinkedList();
+        head = ll.new Node(1);
+        head.next = ll.new Node(2);
+        head.next.next = ll.new Node(3);
         head.next.next.next = head;
         System.out.println(isCycle(0));
     }
