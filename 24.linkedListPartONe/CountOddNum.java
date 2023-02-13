@@ -71,7 +71,7 @@ class CountOddNum {
         System.out.print("Enter ending number = ");
         int end = sc.nextInt();
 
-        System.out.println(bitwise(start, end));
+        // System.out.println(bitwise(start, end));
         //object
         CountOddNum ll = new CountOddNum();
         int count = 0;
