@@ -18,12 +18,12 @@ public class ReversingDoubley {
         Node next;
         while(curr != null) {
             next = curr.next;
-            curr.next = null;
+            curr.next = prev;
             curr.prev = next;
-            curr.prev = 
             prev = curr;
             curr = next;
         }
+        head = prev;
     }
     public static void main(String[] args) {
         ReversingDoubley ll = new ReversingDoubley();
