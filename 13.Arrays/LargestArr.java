@@ -1,4 +1,3 @@
-package Arrays.OneDArray;
 
 class LargestArr{
     public static int fingLargeNum(int num[]){

@@ -1,4 +1,3 @@
-package Arrays.OneDArray;
 
 import java.util.Scanner;
 

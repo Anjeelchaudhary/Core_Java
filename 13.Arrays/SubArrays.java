@@ -1,4 +1,3 @@
-package Arrays.OneDArray;
 
 public class SubArrays {
     public static void calcSub(int numbers[]) {

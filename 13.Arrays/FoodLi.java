@@ -1,4 +1,3 @@
-package Arrays.OneDArray;
 
 public class FoodLi {
     public static int searchFood(String food[],String key){

@@ -1,4 +1,3 @@
-package Arrays.OneDArray;
 
 class LinearSearch{
     public static int linearSearch(int numbers[],int key){

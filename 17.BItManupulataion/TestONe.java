@@ -1,4 +1,4 @@
-package BItManupulataion.excersise;
+
 
 import java.util.Scanner;
 

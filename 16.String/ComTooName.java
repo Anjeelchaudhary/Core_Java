@@ -1,4 +1,4 @@
-package String;
+
 
 public class ComTooName {
     public static void main(String[] args){

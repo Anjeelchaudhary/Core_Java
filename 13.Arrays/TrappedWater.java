@@ -1,4 +1,3 @@
-package Arrays.OneDArray;
 
 public class TrappedWater {
     public static int calcReserdWater(int height[]){

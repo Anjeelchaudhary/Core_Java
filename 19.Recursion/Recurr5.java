@@ -1,4 +1,4 @@
-package Recursion;
+
 
 public class Recurr5 {
     public static void printFact(int i,int n,int fact){

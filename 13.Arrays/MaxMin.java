@@ -1,4 +1,3 @@
-package Arrays.OneDArray;
 
 public class MaxMin {
 

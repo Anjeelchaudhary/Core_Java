@@ -1,4 +1,4 @@
-import java.util.LinkedList;
+
 
 public class AddFist {
     public static class Node {
@@ -28,7 +28,7 @@ public class AddFist {
     }
 
     public static void main(String[] args) {
-        LinkedList ll =new LinkedList();
+        AddFist ll =new AddFist();
         ll.adding(1);
         ll.adding(2);
     }

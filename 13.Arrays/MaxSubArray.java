@@ -1,4 +1,4 @@
-package Arrays.OneDArray;
+
 
 class MaxSubArray{
     public static void calcMax(int array[]){

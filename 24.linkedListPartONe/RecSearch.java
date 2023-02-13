@@ -30,7 +30,7 @@ public class RecSearch {
         return helper(head, key);
     }
     public static void main(String[] args) {
-        RecSearch ll new RecSearch();
+        RecSearch ll = new RecSearch();
         System.out.println(ll.recuSearch(3));
     }
 }

@@ -1,4 +1,4 @@
-import java.util.LinkedList;
+
 
 public class PrintingList {
     //creating a node
@@ -57,7 +57,7 @@ public class PrintingList {
         System.out.println("null");
     }
     public static void main(String[] args) {
-        LinkedList ll = new LinkedList();
+        PrintingList ll = new PrintingList();
         ll.print();
         ll.addFirst(2);
         ll.print();

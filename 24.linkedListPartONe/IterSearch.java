@@ -1,4 +1,4 @@
-import java.security.Key;
+
 
 public class IterSearch {//creating a node
     public static class Node {
@@ -26,7 +26,7 @@ public class IterSearch {//creating a node
         return -1; //here if the key is not available in ll then -1 will return
     }
     public static void main(String[] args) {
-        LindkedList ll = new LindkedList();
-        ll.itrSearch(Key);
+        IterSearch ll = new IterSearch();
+        ll.itrSearch(5);
     }
 }

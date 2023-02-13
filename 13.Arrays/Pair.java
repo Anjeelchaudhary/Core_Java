@@ -1,4 +1,3 @@
-package Arrays.OneDArray;
 
 public class Pair {
     public static void calcPair(int numbers[]) {

@@ -20,7 +20,7 @@ public class MergList {
         }
         return slow;
     }
-    public Node twoHeaNode(Node newlftSNode,Node newRighNode) {
+    public  Node twoHeaNode(Node newlftSNode,Node newRighNode) {
         Node newTemp = new Node(-1);
         Node temporary = newTemp;
         while(newRighNode != null && newlftSNode != null) {

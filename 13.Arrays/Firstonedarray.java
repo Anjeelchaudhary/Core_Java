@@ -1,6 +1,3 @@
-package Arrays.OneDArray;
-
-
 
 public class Firstonedarray{
      public static void main(String[] args) {
