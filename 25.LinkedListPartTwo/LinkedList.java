@@ -43,10 +43,13 @@ public class LinkedList {
 
     }    
     public static void main(String[] args) {
-        head = new Node(1);
-        Node temp = new Node(3);
+        LinkedList ll = new LinkedList();
+        head = ll.new Node(1);
+        Node temp = ll.new Node(3);
         head.next = temp;
-        head.next.next = new Node(3);
+        head.next.next = ll.new Node(3);
         head.next.next.next = temp;
-        System.out.println(removeCycle());
+        removeCycle();
+        System.out.println();
+    }
 }
