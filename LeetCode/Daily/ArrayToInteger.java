@@ -29,5 +29,16 @@ public class ArrayToInteger {
         int num[] = {1,2,0,0};
         int k = 34;
         toIntegerSum(num, k);
+        //This is optimised way
+        // LinkedList<Integer> res=new LinkedList<>();
+        // int len=num.length-1;
+        // while(len>=0 || k>0){
+        //     if(len>=0){
+        //         k+=num[len--];
+        //     }
+        //     res.addFirst(k%10);
+        //     k/=10;
+        // }
+        // return res;
     }
 }
