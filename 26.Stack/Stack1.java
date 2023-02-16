@@ -17,6 +17,11 @@ public class Stack1 {
         //for popping out :Note-(Here return type of pop is int because
         // before doing pop we have to return stored data from stack )
         public static int pop() {
+            //if arraylist is empty then it will return -1
+            if(isEmpty()){
+                return -1;
+            }
+
             int top = al.get(al.size()-1);      //1st step : taking out top object
             al.remove(al.size()-1);             // removing top  object
             return top;                         //returning top
@@ -24,6 +29,11 @@ public class Stack1 {
 
         //peek
         public static int peek() {
+            //if arraylist is empty then it will return -1
+            if(isEmpty()){
+                return -1;
+            }
+            
             return al.get(al.size()-1);
         }
     }
