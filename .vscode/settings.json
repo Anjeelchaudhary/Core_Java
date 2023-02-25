@@ -20,5 +20,6 @@
         "Handeling",
         "LeetCode",
         "."
-    ]
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
 }
