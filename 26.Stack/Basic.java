@@ -32,6 +32,15 @@ public class Basic {
         st.push(4);
         st.push(5);
         System.out.println(st.peek()); // peek() function peeks for top element only 
+
+
+        //Arraylist vs stack 
+        ArrayList<Integer> al = new ArrayList<>();
+        al.add(1);
+        al.add(2);
+        al.add(3);
+        al.add(4);
+        System.out.println(al);
         
         
     }
