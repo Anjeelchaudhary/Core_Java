@@ -29,3 +29,4 @@ $ javac --version
 * [Backtracking](https://github.com/Anjeelchaudhary/JavaCode/tree/master/22.Backtracking)
 * [ArrayList](https://github.com/Anjeelchaudhary/JavaCode/tree/master/23.ArrayList)
 * [LinkedList Part One](https://github.com/Anjeelchaudhary/JavaCode/tree/master/24.linkedListPartONe)
+* [LinkedList Part Two](https://github.com/Anjeelchaudhary/JavaCode/tree/master/25.LinkedListPartTwo)
