@@ -1,6 +1,22 @@
 
 # DoubleyLinked List
 
+#### # Creating a DoubleyLinked List
+[Creating a DoubleyLinked List](https://github.com/Anjeelchaudhary/JavaCode/blob/master/25.LinkedListPartTwo/CycleLinkedList.java)
+
+```
+   //Crationg of doubly linkedList
+    public class Node {
+        int data;
+        Node next;
+        Node prev;
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+            this.prev = null;
+        }
+```
+#
 
 #### # Finding circular Linked LIst 
 [CycleLinkedList](https://github.com/Anjeelchaudhary/JavaCode/blob/master/25.LinkedListPartTwo/CycleLinkedList.java)
