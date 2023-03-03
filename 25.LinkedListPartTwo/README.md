@@ -224,4 +224,71 @@
         return mergSortFunction(newLefttHead,newRightHead);
     }
 ```
+
 #
+
+#### #  Reversing DoubleyLinked list 
+[  Reversing DoubleyLinked list ](https://github.com/Anjeelchaudhary/JavaCode/blob/master/25.LinkedListPartTwo/ReversingDoubley.java)
+
+```
+    public static void revDo() {
+        Node curr = head;
+        Node prev = null;
+        Node next;
+        while(curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            curr.prev = next;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
+```
+#
+
+#### #  zigZagZone
+[  zigZagZone](https://github.com/Anjeelchaudhary/JavaCode/blob/master/25.LinkedListPartTwo/Zigzag.java)
+
+```
+  
+    public void zigZagZone() {
+        //find mid
+        Node slow = head;
+        Node fast = head;
+        while(fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        Node mid = slow;
+
+        //reverse 2nd half
+        Node curr = mid.next;
+        mid.next = null;
+        Node prev = null;
+        Node next;
+
+        while(curr!= null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+
+        Node leftHead = head;
+        Node rightHead = prev;
+        Node nextL , nextR;
+
+        
+        //alterMerg - zigzag
+        while(leftHead != null && rightHead != null) {
+            nextL = leftHead.next;
+            leftHead.next = rightHead;
+            nextR = rightHead.next;
+            rightHead.next = nextL;
+
+            leftHead = nextL;
+            rightHead = nextR;
+        }
+    }
+```
