@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Stack1 {
+public class Stfunctino {
     static class Stack {
         static ArrayList<Integer> al = new ArrayList<>();
 
