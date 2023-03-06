@@ -33,5 +33,10 @@ public class NxtGreaterel {
     public static void main(String[] args) {
         int arr[] = {6 , 8 , 0 ,1 , 3};
         greaterElement(arr);
+
+        //nextGreater Right <-this program
+        //nextGreater Left  <-inverse the for loop
+        //nextSmaller Rigth <-change the condition for while loop as greater than
+        //nextSmaller Left 
     }
 }
