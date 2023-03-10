@@ -6,11 +6,11 @@ public class PracFullMerg {
 
         int mid = start + (end - start)/2;         //divider of the array
         return calculateMe(array, start, mid);     //for left
-        return calculateMe(array, mid+1, end);
-        return mergMe(array , start , mid , end);
+        return calculateMe(array, mid+1, end);     //for right
+        return mergMe(array , start , mid , end);  //for cacluation
     }
 
     public static int mergMe(int array[] , int start , int mid ,int end) {
-        
+
     }
 }
