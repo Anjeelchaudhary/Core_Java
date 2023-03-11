@@ -11,7 +11,7 @@ public class PracFullMerg {
     }
 
     public static void mergMe(int array[] , int start , int mid ,int end) {
-        int temppo[] = new int[start+end+1];
+        int temppo[] = new int[start-end+1];
         int i=start;
         int j=mid+1;
         int k=0;
@@ -47,5 +47,7 @@ public class PracFullMerg {
     }
     public static void main(String[] args) {
         int array[] = {6,3,9,5,2,8};
+        calculateMe(array, 0, array.length-1);
+        print(array);
     }
 }
