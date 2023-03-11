@@ -13,4 +13,7 @@ public class PracFullMerg {
     public static int mergMe(int array[] , int start , int mid ,int end) {
 
     }
+    public static void main(String[] args) {
+        
+    }
 }
