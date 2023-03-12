@@ -1,5 +1,3 @@
-package Sorting;
-
 public class BubbleSort {
     //Sorting function
     public static void calcBubbleSort(int array[]){
