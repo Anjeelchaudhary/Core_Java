@@ -42,9 +42,21 @@ public class Merg {
             temp[k++] = array[j++];
         }
 
+        //adding values in real array from temporary array
+        for(k=0,i=startI;k<temp.length;k++,i++) {
+            array[i] = temp[k];
+        }
+    }
+
+    public static void printing(int array[]) {
+        for(int i=0;i<array.length;i++) {
+            System.out.print(array[i]+" ");
+        }System.out.println();
     }
 
     public static void main(String[] args) {
-        
+        int array[] = {6,3,9,5,2,8};
+        calculation(array, 0, array.length-1);
+        printing(array);
     }
 }
