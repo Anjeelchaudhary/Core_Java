@@ -1,42 +1,24 @@
-
 public class MaxMin {
 
-    public static class ComT{
-        int min;
-        int max;
-            public static pair  CalcMinMax(int arrInput[],int num){
-                ComT de = new ComT();
+    public static  void calcMaxMin(int array[]) {
+      int max = 0;
+      int min = 0;
+      
+      for(int i=0;i<array.length;i++) {
+        if(array[i] > max) {
+            max = array[i];
+        }
+        if(array[i] < min) {
+            min = array[i];
+        }
+      }
 
-                //First condition
-                //If the only one value is present in the list
-                if(num == 1){
-                   de.max = arrInput[0];
-                   de.min = arrInput[0];
-                }
+      System.out.println("Max value is : "+max);
+      System.out.println("Min value is : "+min);
 
-                //second condition
-                //If there only two values in array 
-                if(arrInput[0]>arrInput[1]){
-                    System.out.print("max "+de.max);
-                }else{
-                    System.out.print("min "+de.min);
-                }
-
-                //Third condition
-                //If there are n numbers of value in the arrray 
-                for(int i=2;i<num;i++){
-                    if(arrInput[i]>de.max){
-                        de.max = arrInput[i];
-                    }else if(arrInput[i]<de.min){
-                        de.min = arrInput[i];
-                    }
-                }
-            }
     }
-    public static void main(String args[]){
-        int arrayNum = 7;
-        int arraylist[] = {500,200,85,1,0,399,750};
-        // CalcMinMax(arraylist,arrayNum);// buggy code in main class
+    public static void main(String[] args) {
+        int array[] = {500,200,85,1,0,399,750};
+        calcMaxMin(array);
     }
-   
 }
