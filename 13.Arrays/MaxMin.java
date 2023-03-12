@@ -1,3 +1,4 @@
+
 public class MaxMin {
 
     public static  void calcMaxMin(int array[]) {
