@@ -1,7 +1,11 @@
 public class PracticeQueens {
 
     public static void queenS(char board[][], int row) {
-
+        for(int j = 0; j < board.length ;j++) {
+            board[row][j] = 'Q';    //placed int board
+            queenS(board, row+1);   //recursive call
+            board[row][j] = '-';    //When it returns using bracktrack it will clear occupied place by Queen
+        }
     }
     public static void main(String[] args) {
         int n = 2;
