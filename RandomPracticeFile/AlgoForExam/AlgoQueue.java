@@ -1,6 +1,6 @@
 package AlgoForExam;
 
-import javax.xml.crypto.Data;
+// import javax.xml.crypto.Data;
 
 public class AlgoQueue {
 
@@ -8,17 +8,27 @@ public class AlgoQueue {
 
         //enqueue or inserting an element in queue
         //base case 
-        if(head >= num-1) {
+        if(tail >= num-1) {
             System.out.println("Queue is full");
             return;
         }
 
         //if queue is not full
-        head = head + 1 ;
-        queue[head] = Data;
+        tail = tail + 1 ;
+        queue[tail] = Data;
         Stop
 
-        
+        //dequeue or deleting an element in queue
+        //base case
+        if(head = tail = -1) {
+            System.out.println("Queue is empty");
+            return;
+        }
+
+        //if queue is not empty
+        int value = queue[Data];
+        head = head - 1;
+        Stop
     }
     public static void main(String[] args) {
         
