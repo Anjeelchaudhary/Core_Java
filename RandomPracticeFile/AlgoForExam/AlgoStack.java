@@ -1,6 +1,5 @@
 package AlgoForExam;
 
-import javax.xml.crypto.Data;
 
 public class AlgoStack {
 
