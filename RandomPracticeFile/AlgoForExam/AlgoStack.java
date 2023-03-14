@@ -1,4 +1,7 @@
 package AlgoForExam;
+
+import javax.xml.crypto.Data;
+
 public class AlgoStack {
 
     public static void stAlgorithm() {
@@ -16,6 +19,16 @@ public class AlgoStack {
         Stop
 
 
+        //This is for pop operation in stack 
+        if(top == num-1) {
+            System.out.println("Stack is empty");
+            return;
+        }
+
+        //if stack in not empty
+        int value = Stack[top];
+        top = top - 1;
+        Stop
     }
     public static void main(String[] args) {
         
