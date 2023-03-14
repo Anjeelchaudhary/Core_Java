@@ -29,6 +29,8 @@ public class AlgoQueue {
         int value = queue[Data];
         head = head - 1;
         Stop
+
+        
     }
     public static void main(String[] args) {
         
