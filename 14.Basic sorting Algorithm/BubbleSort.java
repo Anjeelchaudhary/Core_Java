@@ -15,9 +15,9 @@ public class BubbleSort {
     //function for printing 
     public static void printSort(int array[]){
         for(int i=0;i<array.length;i++){
-            System.out.print(array[i]);
+            System.out.print(array[i]+" ");
         }
-        System.out.println(" ");
+        System.out.println();
     }
 
     //main function 
