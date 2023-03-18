@@ -1,5 +1,7 @@
 package Daily;
 
+import java.util.ArrayList;
+
 public class AddBinary {
     public static void main(String[] args) {
         StringBuffer sf = new StringBuffer();
