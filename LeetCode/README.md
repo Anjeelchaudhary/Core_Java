@@ -1,7 +1,7 @@
 
 # Steps to access Leetcode all premium Quesntions in your vs code
 
-#### # Step 1 : You must have install nodejs installed
+#### # Step 1 : You must have nodejs installed
 ```
    sudo apt update
    sudo apt install nodejs
