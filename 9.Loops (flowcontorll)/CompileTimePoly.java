@@ -1,5 +1,3 @@
-package OOPs;
-
 class Many{
     String name;
     int id;

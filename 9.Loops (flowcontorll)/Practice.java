@@ -1,5 +1,3 @@
-package OOPs;
-
 class students {
     String name ;
     String address ;

@@ -1,5 +1,3 @@
-package OOPs;
-
 class pen {
     String name ;
     String color ;

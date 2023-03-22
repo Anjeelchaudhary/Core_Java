@@ -1,5 +1,3 @@
-package OOPs;
-
 class cars {
     String name;
     String type;
