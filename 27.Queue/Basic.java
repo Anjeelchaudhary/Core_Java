@@ -33,7 +33,7 @@ public class Basic {
         }
 
         //remove function
-        public static int deQueue(int data) {
+        public static int remove(int data) {
             //base case
             if(isEmpty()) {
                 System.out.println("Queue isfull");
@@ -57,6 +57,15 @@ public class Basic {
         }
     }
     public static void main(String[] args) {
-        
+        Queue qt = new Queue(5);
+        qt.add(1);
+        qt.add(2);
+        qt.add(3);
+        qt.add(4);
+        qt.add(5);
+        while(!qt.isEmpty()) {
+            System.out.println(qt.peek());
+            qt.remove(0);
+        }
     }
 }
