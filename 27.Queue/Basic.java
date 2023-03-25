@@ -31,6 +31,21 @@ public class Basic {
             rear = rear + 1;
             arra[rear] = data;
         }
+
+        //remove function
+        public static int deQueue(int data) {
+            //base case
+            if(isEmpty()) {
+                System.out.println("Queue isfull");
+                return -1;
+            }
+            int front = arra[0];
+            for(int i=0;i<rear;i++) {
+                arra[i] = arra[i+1];
+            }
+            rear = rear - 1;
+            return front;
+        }
     }
     public static void main(String[] args) {
         
