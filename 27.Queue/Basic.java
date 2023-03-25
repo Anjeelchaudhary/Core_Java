@@ -46,6 +46,15 @@ public class Basic {
             rear = rear - 1;
             return front;
         }
+
+        //peak function in array
+        public static int peek() {
+            if(isEmpty()) {
+                System.out.println("Queue is empty");
+                return -1;
+            }
+            return arra[0];
+        }
     }
     public static void main(String[] args) {
         
