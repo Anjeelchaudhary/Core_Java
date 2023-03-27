@@ -20,7 +20,6 @@ public class CirQueue {
             return (rear+1)%size == front;        
         }
 
-
         //adding function in circular Queue
         public static void queAdd(int data) {
             if(isFulll()) {
