@@ -35,6 +35,23 @@ public class CirQueue {
             rear = (rear+1)%size;  //updating
             arr[rear] = data;
         }
+
+        public static int queRem(int data) {
+            if(isFulll()) {
+                System.out.println("Queue is full ");
+                return -1;
+            }
+
+            int result = arr[front];
+
+            // last element delete
+            if(rear == front) {
+                rear = front = -1;
+            }else {
+                front = (front +1)%size;
+            }
+            return result;
+        }
     }
     public static void main(String[] args) {
         
