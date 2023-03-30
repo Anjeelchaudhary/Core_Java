@@ -22,6 +22,19 @@ public class QuestionOne {
             return head == null && tail == null;
         }
 
+        public static void queueAdd(int data) {
+            Node newNode = new Node(data);
+
+            //base case
+            if(head == null) {
+                head = tail = newNode;
+                return;
+            }
+
+            //for other case
+            tail.next = newNode;
+            newNode = tail;
+        }
 
     }
     public static void main(String[] args) {
