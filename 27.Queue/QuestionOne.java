@@ -1,3 +1,5 @@
+//Adding elements in Queue using LinkedList
+
 public class QuestionOne {
 
     //Class for node
@@ -20,7 +22,7 @@ public class QuestionOne {
             return head == null && tail == null;
         }
 
-        
+
     }
     public static void main(String[] args) {
         
