@@ -36,6 +36,24 @@ public class QuestionOne {
             newNode = tail;
         }
 
+        public static int queueRem(int data) {
+            //base case
+            if(isEEmmpptty()) {
+                System.out.println("Queue is empty");
+                return -1;
+            }
+
+            int value = head.data;
+            //if there is single element in queue
+            if(head == tail) {
+                head = tail = null;
+            }else { 
+                // for more then one element in queue
+                head = head.next;
+            }
+            return value;
+        }
+
     }
     public static void main(String[] args) {
         
