@@ -1,3 +1,5 @@
+import javax.xml.crypto.Data;
+
 public class CirQueue {
 
     //new class for Queue
@@ -52,8 +54,22 @@ public class CirQueue {
             }
             return result;
         }
+
+        public static int peak() {
+            if(isFulll()) {
+                System.out.println("Queue is full ");
+                return -1;
+            }
+            return head.data;
+        }
     }
     public static void main(String[] args) {
-       
+        Queue c = new Queue(3);
+        c.queAdd(0);
+        c.queAdd(1);
+        while(!c.isFulll()) {
+            System.out.println(c.peak());
+            c.queRem(0);
+        }
     }
 }
