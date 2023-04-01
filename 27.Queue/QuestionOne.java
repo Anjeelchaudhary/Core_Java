@@ -54,6 +54,15 @@ public class QuestionOne {
             return value;
         }
 
+
+        public static int peak() {
+            if(isEEmmpptty()) {
+                System.out.println("Queue is full ");
+                return -1;
+            }
+            return head.data;
+        }
+
     }
     public static void main(String[] args) {
         
