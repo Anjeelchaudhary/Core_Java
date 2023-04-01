@@ -77,5 +77,16 @@ public class QuestionOne {
             System.out.println(q.peek());
             q.remove();
         }
+
+        System.out.println("XXXXXXXXXXXXXXXXXXXXX");
+
+        Queue qu = new ArrayDeque<>();
+        qu.add(0);
+        qu.add(1);
+        qu.add(2);
+        while(!qu.isEmpty()) {
+            System.out.println(qu.peek());
+            qu.remove();
+        }
     }
 }
