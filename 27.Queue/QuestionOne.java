@@ -1,7 +1,10 @@
 //Adding elements in Queue using LinkedList
 
-public class QuestionOne {
+import java.util.*;
+import java.util.LinkedList;
 
+public class QuestionOne {
+/* 
     //Class for node
     public static class Node {
         int data;
@@ -62,9 +65,17 @@ public class QuestionOne {
             }
             return head.data;
         }
-
     }
+    */
     public static void main(String[] args) {
-        
+        //Queue is implemented in java only eigther linklist or with dequeue
+        Queue q = new LinkedList<>(); 
+        q.add(0);
+        q.add(1);
+        q.add(2);
+        while(!q.isEmpty()) {
+            System.out.println(q.peek());
+            q.remove();
+        }
     }
 }
