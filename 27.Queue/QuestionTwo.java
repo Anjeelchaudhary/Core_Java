@@ -1,11 +1,22 @@
-import java.util.*;;
+import java.util.*;
 
 public class QuestionTwo {
 
     //new class
-    public class Queue {
-        Stack<Integer> st1 = new Stack<>();
-        Stack<Integer> st2 = new Stack<>();
+    static class Queue {
+        static Stack<Integer> st1 = new Stack<>();
+        static Stack<Integer> st2 = new Stack<>();
+
+        public static boolean isEmpty() {
+            return st1.isEmpty();
+        }
+
+        public static void adding(int data) {
+            //here until stack1 is not empty, simply we pop an element and store it into stack2 
+            while(!st1.isEmpty()) {
+                st2.push(st1.pop());
+            }
+        }
     }
     public static void main(String[] args) {
         
