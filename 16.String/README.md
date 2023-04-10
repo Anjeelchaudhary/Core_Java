@@ -112,3 +112,14 @@ Code for
         return (float)Math.sqrt(x2+y2);
     }
 ```
+
+#### # Character as integer
+
+```
+    //here 26 alphabet assign their posion
+    int finaAns = 'b'-'a';
+    System.out.println(finalAns);
+
+    output:1
+
+```
