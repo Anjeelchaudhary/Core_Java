@@ -13,7 +13,19 @@ public class Tree {
     }
 
     static class BTrees {
-        
+        static int index = -1;
+        public static Node tree(int array[]) {
+            index++;
+
+            if(array[index] == -1) {
+                return null;
+            }
+
+            Node newNode = new Node(array[index]);
+            newNode.left = tree(array);
+            newNode.right = tree(array);
+            return newNode;
+        }
     }
     public static void main(String[] args) {
         
