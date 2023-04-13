@@ -28,6 +28,10 @@ public class Tree {
         }
     }
     public static void main(String[] args) {
-        
+        int roots[] = {1, 2, 4, -1, -1, 5, -1, -1, 3 ,-1, 6};
+        BTrees peddu = new BTrees();
+        Node firstNo = peddu.tree(roots);
+        System.out.println();
+        System.out.println(firstNo+" ");
     }
 }
