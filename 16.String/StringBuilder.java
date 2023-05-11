@@ -9,4 +9,8 @@ public class StringBuilder {
         sb.append(ch);
         System.out.println(sb);
     }
+
+    public StringBuilder append(int currChar) {
+        return null;
+    }
 }
