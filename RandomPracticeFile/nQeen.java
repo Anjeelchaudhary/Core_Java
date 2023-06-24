@@ -1,54 +1,63 @@
-public class nQeen { 
-    public static boolean isSafe(char board[][],int row,int col) {
+public class NQeen {
+
+    public static boolean isTrue(char array[][], int row , int col) {
         //vertical 
-        for(int i=row-1;i>=0;i--) {
-            board[i][col] = 'Q';
-            return false;
+        for(int i= row-1;i>=0;i--) {
+            if(array[i][col] == 'Q') {
+                return false;
+            }
         }
-        //leftDiago
-        for(int i=row-1,j=col-1; i>=0 && j>=0; i--,j--) {
-            board[i][j] = 'Q';
-            return false;
+
+        //leftdiagonal
+        for(int i=row-1,j=col-1;i>=0 && j>=0;i--,j--) {
+            if(array[i][j] == 'Q') {
+                return false;
+            }
         }
-        //rightDiago
-        for(int i=row-1,j=col+1;i>=0 && j<=board.length;i--,j++) {
-            board[i][j] = 'Q';
-            return false;
+
+        for(int i=row-1,j=col+1;i>=0 && j<array.length ;i--,j++) {
+            if(array[i][j] == 'Q') {
+                return false;
+            }
         }
         return true;
     }
-    public static void nQeen(char board[][],int row) {
-        //base case 
-        if(row == board.length) {
-            print(board);
+
+    public static void nQeenBebbo(char array[][],int row) {
+        if(row == array.length) {
+            printQeen(array);
             return;
         }
-        //workdone
-        for(int j=0; j<board.length; j++) {
-            if(isSafe(board,row,j)) {
-                board[row][j] = 'Q';
-                nQeen(board,row+1);//function call
-                board[row][j] = 'X';//backtrack
+
+        for(int j=0;j<array.length;j++) {
+            if(isTrue(array,row,j)) {
+                array[row][j] = 'Q';
+                nQeenBebbo(array, row+1);
+                array[row][j] = '-';
             }
         }
     }
-    //for printing of borads
-    public static void print(char borad[][]) {
-        for(int i=0; i<borad.length ; i++) {
-            for(int j=0; j<borad.length ; j++) {
-                System.out.print(borad[i][j]+" ");
-            }
-            System.out.println();
+
+    public static void printQeen(char array[][]) {
+        System.out.println("XXXXXXXXXX");
+
+        for(int i=0;i<array.length;i++) {
+            for(int j=0;j<array.length;j++) {
+                System.out.print(array[i][j]+" ");
+            }System.out.println();
         }
     }
     public static void main(String[] args) {
         int n = 4;
-        char board[][] = new char[n][n];
+        char array[][] = new char[n][n];
+
+        //for initializing
         for(int i=0;i<n;i++) {
             for(int j=0;j<n;j++) {
-                board[i][j] = 'X';
+                array[i][j] = '-';
             }
         }
-        nQeen(board,0);
+
+        nQeenBebbo(array,0);
     }
 }
